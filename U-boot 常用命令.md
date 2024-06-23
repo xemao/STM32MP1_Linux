@@ -176,7 +176,8 @@ uboot 有 ext2 和 ext4 这两种格式的文件系统的操作命令,STM32MP1 �
 
 `ext4ls <interface> [<dev[:part]>] [directory]`
 
-interface	要查询的接口，比如 mmc， dev 是要查询的设备号
+interface	要查询的接口，比如 mmc
+dev 是要查询的设备号
 part		要查询的分区
 directory	要查询的目录
 
@@ -198,7 +199,7 @@ directory	要查询的目录
 - bytes		表示读取多少字节的数据，如果 bytes 为 0 或者省略的话表示读取整个文件
 - pos		要读的文件相对于文件首地址的偏移，如果为 0 或者省略的话表示从文件首地址开始读取。
 
-> 例如 EMMC 分区 2 中的 uImage 文件读取到DRAM 中的 0XC2000000 地址处
+> 例如 EMMC 分区 2 中的 uImage 文件读取到 DRAM 中的 0XC2000000 地址处
 > ext4load mmc 1:2 C2000000 uImage
 
 ## ext4write

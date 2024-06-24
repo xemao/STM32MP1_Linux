@@ -328,6 +328,39 @@ addr 就是 PHY 芯片地址
 
 - 显示BMP图片
 
+# bootargs环境变量
+
+在 Linux 内核源码里面有相应的文档讲解如何设置，文档为 *Documentation/filesystems/nfs/nfsroot.txt*
+
+格式： 
+
+```
+root=/dev/nfs nfsroot=[<server-ip>:]<root-dir>[,<nfs-options>] ip=<client-ip>:<server-ip>:<gwip>:<netmask>:<hostname>:<device>:<autoconf>:<dns0-ip>:<dns1-ip>
+```
+
+- <server-ip>：服务器 IP 地址，也就是存放根文件系统主机的 IP 地址，那就是 Ubuntu 的 IP 地址，比如我的 Ubuntu 主机 IP 地址为 192.168.1.249。
+- <root-dir>： 根文件系统的存放路径，比如我的就是/home/zuozhongkai/linux/nfs/rootfs。
+- <nfs-options>： NFS 的其他可选选项，一般不设置。
+- <client-ip>： 客户端 IP 地址，也就是我们开发板的 IP 地址， Linux 内核启动以后就会使用此 IP 地址来配置开发板。此地址一定要和 Ubuntu 主机在同一个网段内，并且没有被其他的设备使用，在 Ubuntu 中使用 ping 命令 ping 一下就知道要设置的 IP 地址有没有被使用，如果不能 ping 通就说明没有被使用，那么就可以设置为开发板的 IP 地址，比如我就可以设置为 192.168.1.250。
+- <server-ip>： 服务器 IP 地址，前面已经说了。
+- <gw-ip>： 网关地址，我的就是 192.168.1.1。
+- <netmask>：子网掩码，我的就是 255.255.255.0。
+- <hostname>：客户机的名字，一般不设置，此值可以空着。
+- <device>： 设备名，也就是网卡名，一般是 eth0， eth1….，正点原子 STM32MP157 开发板只有一个网口，名字为 eth0。
+- <autoconf>： 自动配置，一般不使用，所以设置为 off。
+- <dns0-ip>： DNS0 服务器 IP 地址，不使用。
+- <dns1-ip>： DNS1 服务器 IP 地址，不使用。
+
+根据上面的格式 bootargs 环境变量的 root 值如下：
+
+```sh
+root=/dev/nfs nfsroot=192.168.1.249:/home/zuozhongkai/linux/nfs/rootfs,proto=tcp rw ip=192.
+168.1.250:192.168.1.249:192.168.1.1:255.255.255.0::eth0:off
+```
+
+- “proto=tcp”表示使用 TCP 协议
+- “rw”表示 nfs 挂载的根文件系统为可读可写
+
 # 手册勘误
 
 

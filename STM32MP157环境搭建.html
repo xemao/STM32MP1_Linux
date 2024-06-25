@@ -1,0 +1,2080 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable,
+.markdown-body .highlighttable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr,
+.markdown-body .highlighttable {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite,
+.markdown-body .highlighttable pre,
+.markdown-body .highlighttable div.highlight {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td,
+.markdown-body .highlighttable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
+}
+
+.markdown-body code:not(.highlight):not(.codehilite), .markdown-body samp {
+  background-color: rgba(0,0,0,0.04);
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite,
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+}
+
+.markdown-body .codehilite,
+.markdown-body .highlight,
+.markdown-body pre {
+  border-radius: 3px;
+}
+
+.markdown-body :not(.highlight) > pre {
+  background-color: #f7f7f7;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+.markdown-body diagram-div, .markdown-body div.uml-sequence-diagram, .markdown-body, div.uml-flowchart {
+  overflow: auto;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.highlight {background-color:#f7f7f7;color:#333333;}
+.highlight .hll {background-color:#ffffcc;}
+.highlight .c{color:#999988;font-style:italic}
+.highlight .err{color:#a61717;background-color:#e3d2d2}
+.highlight .k{font-weight:bold}
+.highlight .o{font-weight:bold}
+.highlight .cm{color:#999988;font-style:italic}
+.highlight .cp{color:#999999;font-weight:bold}
+.highlight .c1{color:#999988;font-style:italic}
+.highlight .cs{color:#999999;font-weight:bold;font-style:italic}
+.highlight .gd{color:#000000;background-color:#ffdddd}
+.highlight .ge{font-style:italic}
+.highlight .gr{color:#aa0000}
+.highlight .gh{color:#999999}
+.highlight .gi{color:#000000;background-color:#ddffdd}
+.highlight .go{color:#888888}
+.highlight .gp{color:#555555}
+.highlight .gs{font-weight:bold}
+.highlight .gu{color:#800080;font-weight:bold}
+.highlight .gt{color:#aa0000}
+.highlight .kc{font-weight:bold}
+.highlight .kd{font-weight:bold}
+.highlight .kn{font-weight:bold}
+.highlight .kp{font-weight:bold}
+.highlight .kr{font-weight:bold}
+.highlight .kt{color:#445588;font-weight:bold}
+.highlight .m{color:#009999}
+.highlight .s{color:#dd1144}
+.highlight .n{color:#333333}
+.highlight .na{color:teal}
+.highlight .nb{color:#0086b3}
+.highlight .nc{color:#445588;font-weight:bold}
+.highlight .no{color:teal}
+.highlight .ni{color:purple}
+.highlight .ne{color:#990000;font-weight:bold}
+.highlight .nf{color:#990000;font-weight:bold}
+.highlight .nn{color:#555555}
+.highlight .nt{color:navy}
+.highlight .nv{color:teal}
+.highlight .ow{font-weight:bold}
+.highlight .w{color:#bbbbbb}
+.highlight .mf{color:#009999}
+.highlight .mh{color:#009999}
+.highlight .mi{color:#009999}
+.highlight .mo{color:#009999}
+.highlight .sb{color:#dd1144}
+.highlight .sc{color:#dd1144}
+.highlight .sd{color:#dd1144}
+.highlight .s2{color:#dd1144}
+.highlight .se{color:#dd1144}
+.highlight .sh{color:#dd1144}
+.highlight .si{color:#dd1144}
+.highlight .sx{color:#dd1144}
+.highlight .sr{color:#009926}
+.highlight .s1{color:#dd1144}
+.highlight .ss{color:#990073}
+.highlight .bp{color:#999999}
+.highlight .vc{color:teal}
+.highlight .vg{color:teal}
+.highlight .vi{color:teal}
+.highlight .il{color:#009999}
+.highlight .gc{color:#999;background-color:#EAF2F5}
+</style><title>STM32MP157环境搭建</title></head><body><article class="markdown-body"><h1 id="linux">Linux 基础<a class="headerlink" href="#linux" title="Permanent link"></a></h1>
+<p>ARM Cortex-A7 使用32位指令集和32位地址空间</p>
+<ul>
+<li>创建目录和子目录</li>
+</ul>
+<blockquote>
+<p>mkdir -p dir/dir </p>
+</blockquote>
+<ul>
+<li>拷贝</li>
+</ul>
+<blockquote>
+<p>cp -rfd dir_a dir_b 
+d：如果源文件为链接文件，也只是把它作为链接文件复制过去，而不是复制实际文件</p>
+</blockquote>
+<ul>
+<li>删除</li>
+</ul>
+<blockquote>
+<p>rm -rf dir_a </p>
+</blockquote>
+<ul>
+<li>chmod：改变文件的权限</li>
+</ul>
+<blockquote>
+<p>chmod a+w .bashrc
+chmod a-x .bashrc 增加或去除某种权限
+<strong>+</strong> 表示添加权限，<strong>-</strong>表示去除权限</p>
+</blockquote>
+<p>tar xf xxx -C dir/xxx 提取文件, (-C 某个目录）</p>
+<p>gedit 自带的图形文本编辑器</p>
+<p>vi 配置：用户目录下添加 .vimrc文件</p>
+<h1 id="ubuntu">Ubuntu 环境<a class="headerlink" href="#ubuntu" title="Permanent link"></a></h1>
+<p>安装 <code>git</code> <code>vsftpd</code> <code>nfs-kernel-server</code> <code>rpcbind</code> <code>openssh-server</code> <code>xclip</code></p>
+<p>可选工具 <code>neofetch</code> <code>ranger</code> <code>fzf</code> <code>zsh</code></p>
+<p>ranger：输入 :set draw_borders both 来打开边框</p>
+<p>设置 <em>zsh</em> 为默认 shell</p>
+<div class="highlight"><pre><span class="c1"># 查看版本</span>
+zsh --version
+<span class="c1"># 设为默认</span>
+sudo chsh -s <span class="k">$(</span>which zsh<span class="k">)</span>
+<span class="c1"># 验证</span>
+<span class="nb">echo</span> <span class="nv">$SHELL</span>
+</pre></div>
+
+<p>使用 <em>wget</em> 安装 <em>oh-my-zsh</em> <code>sh -c "$(wget -O- https://install.ohmyz.sh/)"</code></p>
+<p>插件：</p>
+<blockquote>
+<p>zsh-autosuggestions： 一个命令提示插件 (apt安装)
+  zsh-syntax-highlighting ： 一个命令语法校验插件 (apt安装)
+  web-search ： 命令行跳转浏览器搜索（自带）</p>
+</blockquote>
+<p>在配置文件 ~/.zshrc 中 找到 <strong>plugins</strong> 添加插件名称，找到 <strong>ZSH_THEME</strong> 修改主题</p>
+<ol>
+<li>FTP(可选)</li>
+</ol>
+<blockquote>
+<p>sudo vi /etc/vsftpd.conf</p>
+</blockquote>
+<p>取消注释</p>
+<blockquote>
+<p>local_enable=YES
+write_enable=YES</p>
+</blockquote>
+<ol start="2">
+<li>NFS</li>
+</ol>
+<p>打开</p>
+<blockquote>
+<p>sudo vi /etc/exports</p>
+</blockquote>
+<p>添加</p>
+<blockquote>
+<p><code>/home/zuozhongkai/linux/nfs *(rw,sync,no_root_squash)</code></p>
+</blockquote>
+<p>确保目录存在且文件夹有权限</p>
+<ol start="3">
+<li>tftp</li>
+</ol>
+<blockquote>
+<p>sudo apt-get install tftp-hpa tftpd-hpa</p>
+</blockquote>
+<p>打开 /etc/default/tftpd-hpa 文件，加入如下内容</p>
+<div class="highlight"><pre><span class="c1"># /etc/default/tftpd-hpa</span>
+
+<span class="nv">TFTP_USERNAME</span><span class="o">=</span><span class="s2">&quot;tftp&quot;</span>
+<span class="nv">TFTP_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/home/liangwencong/linux/tftpboot&quot;</span>
+<span class="nv">TFTP_ADDRESS</span><span class="o">=</span><span class="s2">&quot;:69&quot;</span>
+<span class="nv">TFTP_OPTIONS</span><span class="o">=</span><span class="s2">&quot;-l -c -s&quot;</span>
+</pre></div>
+
+<h2 id="_1">安装 交叉编译器<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
+<ol>
+<li>
+<p><a href="https://developer.arm.com/downloads/-/gnu-a">下载地址</a> 最下面是旧版的，更旧的版本可能需要百度找了。</p>
+</li>
+<li>
+<p>在 x86_64 Linux hosted cross compilers 平台下选择 <em>arm-none-linux-gnueabihf</em> 编译器 <em>.tar.xz</em> 类型的压缩包
+<img alt="交叉编译器" src="/C:/Users/mjl12/OneDrive/Desktop/STM32MP1_Linux/STM32MP157%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/tu1.png" /></p>
+</li>
+<li>
+<p>下载解压到 <em>/usr/local/arm/</em> (创建 arm 文件夹)</p>
+</li>
+<li>
+<p>添加到环境变量</p>
+</li>
+</ol>
+<ul>
+<li>bash（默认）: </li>
+</ul>
+<div class="highlight"><pre><span class="c1"># 打开文件</span>
+sudo vi /etc/profile
+<span class="c1"># 文件最后面添加，xxx 为解压后编译器文件夹的名字</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/arm/xxx/bin
+</pre></div>
+
+<ul>
+<li>zsh :</li>
+</ul>
+<p>在用户根目录下的 <em>.zshrc</em> 配置文件 添加 <code>export PATH=$PATH:/usr/local/arm/xxx/bin</code></p>
+<p>验证 <code>arm-none-linux-gnueabihf-gcc -v</code></p>
+<h2 id="vscodest">VSCode和ST软件安装<a class="headerlink" href="#vscodest" title="Permanent link"></a></h2>
+<ol>
+<li><a href="https://code.visualstudio.com/">下载VSCode</a></li>
+</ol>
+<p>下载 <em>.deb</em> 后缀的安装包</p>
+<ul>
+<li>使用 apt 安装：进入下载目录执行 <code>sudo apt install ./xxx.deb</code> , xxx为下载的安装包名</li>
+<li>使用 dpkg 安装 : <code>sudo dpkg -i xxx.deb</code></li>
+</ul>
+<ol start="2">
+<li>插件</li>
+</ol>
+<blockquote>
+<p>C/C++                  这个肯定是必须的。
+C/C++ Snippets         C/C++重用代码块。
+C/C++ Advanced Lint    C/C++静态检测 。
+Code Runner            代码运行。
+Include AutoComplete   自动头文件包含。
+Rainbow Brackets       彩虹花括号，有助于阅读代码。
+One Dark Pro           VSCode 的主题。
+GBKtoUTF8              将 GBK 转换为 UTF8。
+ARM                支持 ARM 汇编语法高亮显示。
+Chinese(Simplified)    中文环境。
+vscode-icons           VSCode 图标插件
+compareit              比较插件，可以用于比较两个文件的差异。
+DeviceTree             设备树语法插件。
+TabNine        一款 AI 自动补全插件，强烈推荐，谁用谁知道！</p>
+</blockquote>
+<ol start="3">
+<li><a href="https://www.st.com.cn/zh/development-tools/stm32cubeprog.html">下载STM32CubeProgrammer</a></li>
+</ol>
+<p>获取软件选择 &lsquo;STM32CubePrg-Lin&rsquo; 需要登录下载，</p>
+<p>下载后解压 <code>unzip xxx.zip</code> 后运行 <code>./xxx.linux</code> 的文件</p>
+<blockquote>
+<p>之后还安装了下面的库
+sudo apt-get install libusb-1.0.0-dev</p>
+</blockquote>
+<ol start="4">
+<li>USB DFU 以及 STLink 驱动安装</li>
+</ol>
+<p>进入 STM32CubeProgrammer 安装路径下的 <em>/Drivers/rules</em> 
+执行 <code>sudo cp *.rules /etc/udev/rules.d/</code>
+即拷贝 <em>.rules</em> 后缀的文件到 <em>/etc/udev/rules.d/</em></p>
+<p><strong>验证</strong> 插入 stlink 设备可在 <em>/dev/</em> 目录下查看</p>
+<h2 id="stm32mp1">STM32MP1启动<a class="headerlink" href="#stm32mp1" title="Permanent link"></a></h2>
+<h3 id="_2">一、安全启动（一般）<a class="headerlink" href="#_2" title="Permanent link"></a></h3>
+<ol>
+<li>
+<p>首先 ROM 代码从选定的 Flash 设备中加载 FSBL 镜像文件(有头部信息)， FSBL 镜像就是 ROM 加载的第一个用户编写的可执行程序，一般是 TF-A 镜像。</p>
+</li>
+<li>
+<p>FSBL 镜像加载以后需要对其进行鉴权</p>
+</li>
+<li>
+<p>鉴权成功，那么就会跳转到 FSBL 镜像入口地址，开始运行 FSBL 固件</p>
+</li>
+</ol>
+<h3 id="_3">二、串行启动<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
+<ol>
+<li>USB 启动</li>
+</ol>
+<p>通过 USB OTG 接口来向 STM32MP1 烧写系统</p>
+<ol start="2">
+<li>UART 启动</li>
+</ol>
+<p>通过 UART 烧写系统</p>
+<h3 id="flash">Flash 设备启动要求<a class="headerlink" href="#flash" title="Permanent link"></a></h3>
+<pre><code>官方的 Flash 分区建议
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>尺寸</th>
+<th>分区</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>256KB~512KB</td>
+<td>fsbl</td>
+<td>第一阶段启动代码，此分区存放 TF-A 或者 uboot 的 SPL 部分，<br> 如果写 A7 裸机例程的话此分区也用来存放裸机代码。</td>
+</tr>
+<tr>
+<td>2MB</td>
+<td>ssbl</td>
+<td>第二阶段启动代码， 一般是 uboot，如果 uboot 使用设备树的话,<br> 设备树添加到后面。</td>
+</tr>
+<tr>
+<td>64MB</td>
+<td>bootfs</td>
+<td>boot 文件分区，可以存放如下内容：<br> · init ram 文件系统，可以将此文件系统拷贝到 RAM 中，<br> 在 linux 内核挂载正式根文件系统之前可以使用 init ram文件系统。<br> · linux 内核设备树<br> ·    linux 内核<br> · uboot 显示的启动界面<br> · uboot 发行配置文件 extlinux.conf</td>
+</tr>
+<tr>
+<td>16MB</td>
+<td>vendorfs</td>
+<td>此分区存放第三方的版权信息，确保它们不会受到任何<br> 开源许可的污染，比如 GPL V3。</td>
+</tr>
+<tr>
+<td>768MB</td>
+<td>rootfs</td>
+<td>linux 根文件系统。</td>
+</tr>
+<tr>
+<td>剩余空间</td>
+<td>userfs</td>
+<td>用户自行使用的剩余空间</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stm23mp1-linux">STM23MP1 Linux系统启动过程<a class="headerlink" href="#stm23mp1-linux" title="Permanent link"></a></h3>
+<p><img alt="STM32MP1Linux启动流程" src="/C:/Users/mjl12/OneDrive/Desktop/STM32MP1_Linux/STM32MP157%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/STM32MP1Linux%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B.png" /></p>
+<ol>
+<li>ROM 代码</li>
+</ol>
+<blockquote>
+<p>ST 自己编写的代码，ROM 代码作为第一链，首先要对 FSBL 代码进行鉴权，同样的， FSBL 以及后面的每一链都要对下一个阶段的镜像进行鉴权，直到设备系统正确启动。</p>
+</blockquote>
+<ol start="2">
+<li>FSBL</li>
+</ol>
+<blockquote>
+<p>FSBL 代码初始化时钟树、初始化外部 RAM 控制器，也就是 DDR。最终 FSBL 将 SSBL 加载到 DDR 里面并运行 SSBL 代码。
+一般 FSBL 代码是 TF-A 或者 Uboot 的 SPL 代码，也可以将 FSBL 换成内核裸机代码</p>
+</blockquote>
+<ol start="3">
+<li>SSBL</li>
+</ol>
+<blockquote>
+<p>SSBL 代码运行在 DDR 里面，无需担心空间不够，一般是 Uboot，用来启动 Linux 内核</p>
+</blockquote>
+<ol start="4">
+<li>Linux 内核</li>
+</ol>
+<blockquote>
+<p>Linux 内核启动过程中会初始化板子上的各种外设</p>
+</blockquote>
+<ol start="5">
+<li>Linux 用户空间</li>
+</ol>
+<blockquote>
+<p>系统启动的时候会通过 init 进程切换到用户空间，在这个过程中会初始化根文件系统里面的各种框架以及服务。</p>
+</blockquote>
+<h1 id="tf-a">tf-a<a class="headerlink" href="#tf-a" title="Permanent link"></a></h1>
+<h2 id="_4">准备<a class="headerlink" href="#_4" title="Permanent link"></a></h2>
+<p><del>下载st提供的STM32MP1 OpenSTLinux开发套件 <a href="https://www.st.com.cn/zh/embedded-software/stm32mp1dev.html">https://www.st.com.cn/zh/embedded-software/stm32mp1dev.html</a></del></p>
+<p>使用正点原子提供的包在 &ldquo;01、程序源码\05、ST官方原版Linux源码&rdquo; 中
+    里面有Linux内核、U-boot、tf-a</p>
+<p>解压压缩包进到tf-a目录(tf-a-stm32mp-2.2.r1-r0)执行</p>
+<div class="highlight"><pre><span class="c1"># 解压目录下文件</span>
+tar xf tf-a-stm32mp-2.2.r1-r0.tar.gz
+<span class="c1"># 进入</span>
+<span class="nb">cd </span>tf-a-stm32mp-2.2.r1
+<span class="c1"># 打补丁</span>
+<span class="k">for</span> p in <span class="sb">`</span>ls -1 ../*.patch<span class="sb">`</span><span class="p">;</span> <span class="k">do</span> patch -p1 &lt; <span class="nv">$p</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+
+<ul>
+<li>
+<p>使用自己的交叉编译器
+打开 Makefile.sdk， 找到<code>CROSS_COMPILE</code>，将其改为“arm-none-linux-gnueabihf-”</p>
+</li>
+<li>
+<p>编译需要的工具：
+<a href="https://github.com/STMicroelectronics/stm32wrapper4dbg/">stm32wrapper4dbg</a>
+<code>stm32image</code></p>
+</li>
+</ul>
+<h2 id="_5">移植<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<h3 id="_6">创建自己的设备树<a class="headerlink" href="#_6" title="Permanent link"></a></h3>
+<p>tf-a源码\fdts 中的</p>
+<div class="highlight"><pre>cp stm32mp157d-ed1.dts stm32mp157d-atk.dts
+cp stm32mp15xx-edx.dtsi stm32mp157d-atk.dtsi
+</pre></div>
+
+<p>修改 stm32mp157d-atk.dts 中的 <code>stm32mp15xx-edx.dtsi</code> 为 <code>#include "stm32mp157d-atk.dtsi"</code></p>
+<p><code>TFA_DEVICETREE</code> 配置项中添加 “stm32mp157d-atk”</p>
+<h3 id="tf-emmc">修改电源管理和 TF 卡、 EMMC 设备树<a class="headerlink" href="#tf-emmc" title="Permanent link"></a></h3>
+<h4 id="stm32mp157datkdtsi">stm32mp157datk.dtsi文件修改:<a class="headerlink" href="#stm32mp157datkdtsi" title="Permanent link"></a></h4>
+<ul>
+<li>删除 pmic</li>
+<li>删除vin节点，用下面内容替换</li>
+</ul>
+<div class="highlight"><pre>vddcore: regulator-vddcore <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vddcore&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;1200000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;1350000&gt;<span class="p">;</span>
+    regulator-off-in-suspend<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+v3v3: regulator-3p3v <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;v3v3&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-off-in-suspend<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+vdd: regulator-vdd <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vdd&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-off-in-suspend<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+vdd_usb: regulator-vdd-usb <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vdd_usb&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-off-in-suspend<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<p><em>解释</em>： </p>
+<blockquote>
+<p>VDDCORE 电源，也就是 STM32MP157 的内核电源，最小为 1.2V，最大为 1.35V。
+  3.3V 电源，最小和最大都是 3.3V
+  VDD 电源，这是一个 3.3V 的电源，所以最小和最大都为 3.3V
+  VDD_USB 电源，为 3.3V，所以最小和最大都为 3.3V</p>
+</blockquote>
+<ul>
+<li><em>sdmmc1</em> 和 <em>sdmmc2</em> 节点 替换：</li>
+</ul>
+<div class="highlight"><pre><span class="p">&amp;</span>sdmmc1 <span class="o">{</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_pins_a <span class="p">&amp;</span>sdmmc1_dir_pins_a&gt;<span class="p">;</span>
+    st,neg-edge<span class="p">;</span>
+    broken-cd<span class="p">;</span>
+    bus-width <span class="o">=</span> &lt;4&gt;<span class="p">;</span>
+    vmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+<span class="p">&amp;</span>sdmmc2 <span class="o">{</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_pins_a <span class="p">&amp;</span>sdmmc2_d47_pins_a&gt;<span class="p">;</span>
+    non-removable<span class="p">;</span>
+    st,neg-edge<span class="p">;</span>
+    bus-width <span class="o">=</span> &lt;8&gt;<span class="p">;</span>
+    vmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    vqmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<ul>
+<li><em>usbotg_hs</em> 节点 替换</li>
+</ul>
+<div class="highlight"><pre><span class="p">&amp;</span>usbotg_hs <span class="o">{</span>
+    <span class="nv">phys</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>usbphyc_port1 0&gt;<span class="p">;</span>
+    phy-names <span class="o">=</span> <span class="s2">&quot;usb2-phy&quot;</span><span class="p">;</span>
+    usb-role-switch<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+<span class="p">&amp;</span>usbphyc <span class="o">{</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<p>修改完成，编译 <code>make -f ../Makefile.sdk</code> 复制 ../build/trusted 下的 <em>tf-a-stm32mp157d-atk-trusted.stm32</em></p>
+<h2 id="xxx-serialbootstm32">xxx-serialboot.stm32 文件编译<a class="headerlink" href="#xxx-serialbootstm32" title="Permanent link"></a></h2>
+<p>此文件用于 <strong>串行启动</strong> 主要用于初始化 DDR，并且提供 USB 或串口功能，目的是为了进一步将 uboot 镜像下载到 DDR 的指定位置，最终通过 uboot 来向外部 flash 设备烧写整个系统镜像。</p>
+<p>打开 Makefile.sdk 将 EXTRA_OEMAKE_SERIAL 改为</p>
+<div class="highlight"><pre><span class="nv">EXTRA_OEMAKE_SERIAL</span><span class="o">=</span><span class="k">$(</span>filter-out <span class="nv">STM32MP_SDMMC</span><span class="o">=</span><span class="m">1</span> <span class="nv">STM32MP_EMMC</span><span class="o">=</span><span class="m">1</span> <span class="nv">STM32MP_SPI_NOR</span><span class="o">=</span><span class="m">1</span> <span class="nv">STM32MP_RAW_NAND</span><span class="o">=</span><span class="m">1</span> <span class="nv">STM32MP_SPI_NAND</span><span class="o">=</span>1,<span class="k">$(</span>EXTRA_OEMAKE<span class="k">))</span> <span class="nv">STM32MP_UART_PROGRAMMER</span><span class="o">=</span><span class="m">1</span> <span class="nv">STM32MP_USB_PROGRAMMER</span><span class="o">=</span>1
+</pre></div>
+
+<p>然后</p>
+<div class="highlight"><pre>make -f ../Makefile.sdk clean
+make -f ../Makefile.sdk <span class="nv">TFA_DEVICETREE</span><span class="o">=</span>stm32mp157d-atk <span class="nv">TF_A_CONFIG</span><span class="o">=</span>serialboot <span class="nv">ELF_DEBUG_ENABLE</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> all
+</pre></div>
+
+<p>在../build/serialboot 目录下生成</p>
+<h1 id="u-boot">U-boot<a class="headerlink" href="#u-boot" title="Permanent link"></a></h1>
+<h2 id="_7">准备<a class="headerlink" href="#_7" title="Permanent link"></a></h2>
+<p>安装一些库</p>
+<div class="highlight"><pre>sudo apt-get install libncurses5-dev bison flex
+</pre></div>
+
+<p>解压u-boot,进到源码目录打补丁
+<div class="highlight"><pre><span class="k">for</span> p in <span class="sb">`</span>ls -1 ../*.patch<span class="sb">`</span><span class="p">;</span> <span class="k">do</span> patch -p1 &lt; <span class="nv">$p</span><span class="p">;</span> <span class="k">done</span>
+</pre></div></p>
+<p><strong>源码目录复制到其他地方！！！</strong></p>
+<p>修改 uboot 的 Makefile 文件</p>
+<div class="highlight"><pre><span class="cp">ifeq ($(HOSTARCH),$(ARCH))</span>
+<span class="nv">CROSS_COMPILE</span> <span class="o">?=</span>
+<span class="cp">endif</span>
+<span class="c"># 在此添加下面两句话</span>
+<span class="nv">ARCH</span><span class="o">=</span>arm
+<span class="nv">CROSS_COMPILE</span><span class="o">=</span>arm-none-linux-gnueabihf-
+</pre></div>
+
+<div class="highlight"><pre><span class="c1"># 默认配置</span>
+make stm32mp15_trusted_defconfig
+<span class="c1"># 进入 configs 目录</span>
+<span class="nb">cd </span>configs
+<span class="c1"># 拷贝配置文件</span>
+cp stm32mp15_trusted_defconfig stm32mp15_atk_trusted_defconfig
+</pre></div>
+
+<h2 id="_8">创建默认配置设备树<a class="headerlink" href="#_8" title="Permanent link"></a></h2>
+<div class="highlight"><pre><span class="c1"># 进入 uboot 设备树目录</span>
+<span class="nb">cd </span>arch/arm/dts/
+cp stm32mp157d-ed1.dts stm32mp157d-atk.dts
+cp stm32mp15xx-edx.dtsi stm32mp157d-atk.dtsi
+cp stm32mp157a-ed1-u-boot.dtsi stm32mp157d-atk-u-boot.dtsi
+</pre></div>
+
+<ol>
+<li>stm32mp157d-atk.dts 文件修改头文件引用 <em>stm32mp15xx-edx.dtsi</em> 头文件，将其改为上面创建的 <em>stm32mp15d-atk.dtsi</em></li>
+<li><em>stm32mp157d-atk-u-boot.dtsi</em> 文件删除 21~22 行、 26~31 行和 51~53 行</li>
+</ol>
+<p>如下面所示</p>
+<div class="highlight"><pre>config <span class="o">{</span>
+    u-boot,boot-led <span class="o">=</span> <span class="s2">&quot;heartbeat&quot;</span><span class="p">;</span>
+    u-boot,error-led <span class="o">=</span> <span class="s2">&quot;error&quot;</span><span class="p">;</span>
+    u-boot,mmc-env-partition <span class="o">=</span> <span class="s2">&quot;ssbl&quot;</span><span class="p">;</span>
+x   st,fastboot-gpios <span class="o">=</span> &lt;<span class="p">&amp;</span>gpioa <span class="m">13</span> GPIO_ACTIVE_LOW&gt;<span class="p">;</span>
+x   st,stm32prog-gpios <span class="o">=</span> &lt;<span class="p">&amp;</span>gpioa <span class="m">14</span> GPIO_ACTIVE_LOW&gt;<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+led <span class="o">{</span>
+x   red <span class="o">{</span>
+x       <span class="nv">label</span> <span class="o">=</span> <span class="s2">&quot;error&quot;</span><span class="p">;</span>
+x       <span class="nv">gpios</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>gpioa <span class="m">13</span> GPIO_ACTIVE_LOW&gt;<span class="p">;</span>
+x       default-state <span class="o">=</span> <span class="s2">&quot;off&quot;</span><span class="p">;</span>
+x       <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+x       <span class="o">}</span><span class="p">;</span>
+x   <span class="o">}</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+x <span class="p">&amp;</span>pmic <span class="o">{</span>
+x   u-boot,dm-pre-reloc<span class="p">;</span>
+x <span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<ol start="3">
+<li>stm32mp157d-atk.dtsi 文件 adc 节点、 dac 节点、 i2c4 节点 全部删除</li>
+</ol>
+<blockquote>
+<p>Alt + Shift + 右箭头 (可选择光标的括号中的所有内容)</p>
+<p>根节点‘/’中的led 和 sd_switch节点替换成下面自己的电源管理配置</p>
+</blockquote>
+<div class="highlight"><pre>vddcore: regulator-vddcore <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vddcore&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;1200000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;1350000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+v3v3: regulator-3p3v <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;v3v3&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+v1v8_audio: regulator-v1v8-audio <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;v1v8_audio&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;1800000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;1800000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+vdd: regulator-vdd <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vdd&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+vdd_usb: regulator-vdd-usb <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vdd_usb&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<ol start="4">
+<li>修改 TF 卡和 EMMC 配置</li>
+</ol>
+<ul>
+<li>修改 stm32mp157d-atk.dtsi 文件，找到 sdmmc1 和 sdmmc2 节点，改为如下内容</li>
+</ul>
+<div class="highlight"><pre><span class="p">&amp;</span>sdmmc1 <span class="o">{</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;opendrain&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_od_pins_a&gt;<span class="p">;</span>
+    pinctrl-2 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_sleep_pins_a&gt;<span class="p">;</span>
+    st,neg-edge<span class="p">;</span>
+    broken-cd<span class="p">;</span>
+    bus-width <span class="o">=</span> &lt;4&gt;<span class="p">;</span>
+    vmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+<span class="p">&amp;</span>sdmmc2 <span class="o">{</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;opendrain&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_pins_a <span class="p">&amp;</span>sdmmc2_d47_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_od_pins_a <span class="p">&amp;</span>sdmmc2_d47_pins_a&gt;<span class="p">;</span>
+    pinctrl-2 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_sleep_pins_a <span class="p">&amp;</span>sdmmc2_d47_sleep_pins_a&gt;<span class="p">;</span>
+    non-removable<span class="p">;</span>
+    st,neg-edge<span class="p">;</span>
+    bus-width <span class="o">=</span> &lt;8&gt;<span class="p">;</span>
+    vmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    keep-power-in-suspend<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<h3 id="_9">网络驱动修改<a class="headerlink" href="#_9" title="Permanent link"></a></h3>
+<p>将网络节点添加在文件最后：</p>
+<div class="highlight"><pre><span class="p">&amp;</span>ethernet0 <span class="o">{</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>ethernet0_rgmii_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>ethernet0_rgmii_pins_sleep_a&gt;<span class="p">;</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    phy-mode <span class="o">=</span> <span class="s2">&quot;rgmii-id&quot;</span><span class="p">;</span>
+    max-speed <span class="o">=</span> &lt;1000&gt;<span class="p">;</span>
+    phy-handle <span class="o">=</span> &lt;<span class="p">&amp;</span>phy0&gt;<span class="p">;</span>
+
+    mdio0 <span class="o">{</span>
+        <span class="c1">#address-cells = &lt;1&gt;;</span>
+        <span class="c1">#size-cells = &lt;0&gt;;</span>
+        <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;snps,dwmac-mdio&quot;</span><span class="p">;</span>
+        phy0: ethernet-phy@0 <span class="o">{</span>
+            <span class="nv">reg</span> <span class="o">=</span> &lt;0&gt;<span class="p">;</span>
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<p>将正点原子的 1、程序源码 → 8、模块驱动源码 → 1、 YT8511 驱动源码 → uboot 下修改方法 → phy.c 替换掉 uboot 下的/drivers/net/phy/phy.c 文件</p>
+<p>打开 <em>arch/arm/dts/Makefile</em> 文件，找到 <code>dtb-$(CONFIG_STM32MP15x)</code> 配置项， 然后在此配置项中加入 <code>stm32mp157d-atk.dtb</code></p>
+<p>新建一个 <code>stm32mp1_alientek.sh</code> 脚本</p>
+<div class="highlight"><pre><span class="c1"># 编译 u-boot 的命令</span>
+
+<span class="c1">#!/bin/bash</span>
+
+make distclean
+make stm32mp15_atk_trusted_defconfig
+make <span class="nv">DEVICE_TREE</span><span class="o">=</span>stm32mp157d-atk all -j12
+</pre></div>
+
+<p>赋予权限 <code>sudo chmod 755 stm32mp1_alientek.sh</code></p>
+<blockquote>
+<p>V=1 表示编译 uboot 的时候输出详细的编译过程
+-j 选项来使用多线程编译</p>
+</blockquote>
+<h3 id="usb-otg">USB OTG 设备树修改<a class="headerlink" href="#usb-otg" title="Permanent link"></a></h3>
+<blockquote>
+<p>在 <code>stm32mp157d-atk.dtsi</code> 文件中:</p>
+</blockquote>
+<ol>
+<li>根节点在根节点“/”下添加名为 <code>usb_phy_tuning</code> 的子节点, <strong>添加在电源节点前面</strong></li>
+</ol>
+<div class="highlight"><pre>usb_phy_tuning: usb-phy-tuning <span class="o">{</span>
+    st,hs-dc-level <span class="o">=</span> &lt;2&gt;<span class="p">;</span>
+    st,fs-rftime-tuning<span class="p">;</span>
+    st,hs-rftime-reduction<span class="p">;</span>
+    st,hs-current-trim <span class="o">=</span> &lt;15&gt;<span class="p">;</span>
+    st,hs-impedance-trim <span class="o">=</span> &lt;1&gt;<span class="p">;</span>
+    st,squelch-level <span class="o">=</span> &lt;3&gt;<span class="p">;</span>
+    st,hs-rx-offset <span class="o">=</span> &lt;2&gt;<span class="p">;</span>
+    st,no-lsfs-sc<span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<ol start="2">
+<li>添加 STUSB1600 I2C 子节点</li>
+</ol>
+<p>添加在文件最后</p>
+<div class="highlight"><pre><span class="p">&amp;</span>i2c1 <span class="o">{</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>i2c1_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>i2c1_pins_sleep_a&gt;<span class="p">;</span>
+    i2c-scl-rising-time-ns <span class="o">=</span> &lt;100&gt;<span class="p">;</span>
+    i2c-scl-falling-time-ns <span class="o">=</span> &lt;7&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+    /delete-property/dmas<span class="p">;</span>
+    /delete-property/dma-names<span class="p">;</span>
+
+    stusb1600@28 <span class="o">{</span>
+        <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;st,stusb1600&quot;</span><span class="p">;</span>
+        <span class="nv">reg</span> <span class="o">=</span> &lt;0x28&gt;<span class="p">;</span>
+        <span class="nv">interrupts</span> <span class="o">=</span> &lt;<span class="m">2</span> IRQ_TYPE_EDGE_FALLING&gt;<span class="p">;</span>
+        interrupt-parent <span class="o">=</span> &lt;<span class="p">&amp;</span>gpiog&gt;<span class="p">;</span>
+        pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">;</span>
+        pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>stusb1600_pins_a&gt;<span class="p">;</span>
+        <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+        vdd-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>vin&gt;<span class="p">;</span>
+        connector <span class="o">{</span>
+            <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;usb-c-connector&quot;</span><span class="p">;</span>
+            <span class="nv">label</span> <span class="o">=</span> <span class="s2">&quot;USB-C&quot;</span><span class="p">;</span>
+            power-role <span class="o">=</span> <span class="s2">&quot;dual&quot;</span><span class="p">;</span>
+            power-opmode <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">;</span>
+
+            port <span class="o">{</span>
+                con_usbotg_hs_ep: endpoint <span class="o">{</span>
+                    remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>usbotg_hs_ep&gt;<span class="p">;</span>
+                <span class="o">}</span><span class="p">;</span>
+            <span class="o">}</span><span class="p">;</span>
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<ol start="3">
+<li>添加 usb 接口相关节点</li>
+</ol>
+<p>usbotg_hs 默认就有,修改了一下</p>
+<div class="highlight"><pre><span class="p">&amp;</span>usbh_ehci <span class="o">{</span>
+    <span class="nv">phys</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>usbphyc_port0&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+<span class="p">&amp;</span>usbotg_hs <span class="o">{</span>
+    <span class="nv">phys</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>usbphyc_port1 0&gt;<span class="p">;</span>
+    phy-names <span class="o">=</span> <span class="s2">&quot;usb2-phy&quot;</span><span class="p">;</span>
+    usb-role-switch<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+
+    port <span class="o">{</span>
+        usbotg_hs_ep: endpoint <span class="o">{</span>
+            remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>con_usbotg_hs_ep&gt;<span class="p">;</span>
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+<span class="p">&amp;</span>usbphyc <span class="o">{</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<ol start="4">
+<li>在 <em>stm32mp157d-atk-u-boot.dtsi</em> 文件最后添加 <code>usbotg_hs</code> 节点</li>
+</ol>
+<div class="highlight"><pre><span class="p">&amp;</span>usbotg_hs <span class="o">{</span>
+    u-boot,force-b-session-valid<span class="p">;</span>
+    hnp-srp-disable<span class="p">;</span>
+    /* TEMP: force peripheral <span class="k">for</span> USB OTG */
+    <span class="nv">dr_mode</span> <span class="o">=</span> <span class="s2">&quot;peripheral&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<h3 id="lcd">LCD 驱动修改<a class="headerlink" href="#lcd" title="Permanent link"></a></h3>
+<p>在 stm32mp157d-atk.<strong>dts</strong> 文件，在里面添加 LCD 相关节点信息，首先在根节点“/”下添加 panel_backlight 和 panel_rgb 节点</p>
+<div class="highlight"><pre>panel_backlight: panel-backlight <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;gpio-backlight&quot;</span><span class="p">;</span>
+    <span class="nv">gpios</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>gpiod <span class="m">13</span> GPIO_ACTIVE_HIGH&gt;<span class="p">;</span>
+    default-on<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+
+panel_rgb: panel-rgb <span class="o">{</span>
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;simple-panel&quot;</span><span class="p">;</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>ltdc_pins_b&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>ltdc_pins_sleep_b&gt;<span class="p">;</span>
+    <span class="nv">backlight</span> <span class="o">=</span> &lt;<span class="p">&amp;</span>panel_backlight&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+
+    port <span class="o">{</span>
+        panel_in_rgb: endpoint <span class="o">{</span>
+            remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>ltdc_ep0_out&gt;<span class="p">;</span>
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+
+    display-timings <span class="o">{</span>
+        native-mode <span class="o">=</span> &lt;<span class="p">&amp;</span>timing0&gt;<span class="p">;</span>           /* 时序信息 */
+        timing0: timing0 <span class="o">{</span>                  /* <span class="m">7</span> 寸 1024*600 分辨率 */
+            clock-frequency <span class="o">=</span> &lt;51200000&gt;<span class="p">;</span>   /* LCD 像素时钟，单位 Hz */
+            <span class="nv">hactive</span> <span class="o">=</span> &lt;1024&gt;<span class="p">;</span>               /* LCD X 轴像素个数 */
+            <span class="nv">vactive</span> <span class="o">=</span> &lt;600&gt;<span class="p">;</span>                /* LCD Y 轴像素个数 */
+            hfront-porch <span class="o">=</span> &lt;160&gt;<span class="p">;</span>           /* LCD hfp 参数 */
+            hback-porch <span class="o">=</span> &lt;140&gt;<span class="p">;</span>            /* LCD hbp 参数 */
+            hsync-len <span class="o">=</span> &lt;20&gt;<span class="p">;</span>               /* LCD hspw 参数 */
+            vback-porch <span class="o">=</span> &lt;20&gt;<span class="p">;</span>             /* LCD vbp 参数 */
+            vfront-porch <span class="o">=</span> &lt;12&gt;<span class="p">;</span>            /* LCD vfp 参数 */
+            vsync-len <span class="o">=</span> &lt;3&gt;<span class="p">;</span>                /* LCD vspw 参数 */
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<p>向 ltdc 节点追加一些内容</p>
+<div class="highlight"><pre><span class="p">&amp;</span>ltdc <span class="o">{</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">;</span>
+    port <span class="o">{</span>
+        <span class="c1">#address-cells = &lt;1&gt;;</span>
+        <span class="c1">#size-cells = &lt;0&gt;;</span>
+
+        ltdc_ep0_out: endpoint@0 <span class="o">{</span>
+            <span class="nv">reg</span> <span class="o">=</span> &lt;0&gt;<span class="p">;</span>
+            remote-endpoint <span class="o">=</span> &lt;<span class="p">&amp;</span>panel_in_rgb&gt;<span class="p">;</span>
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+<span class="o">}</span><span class="p">;</span>
+</pre></div>
+
+<p>打开 include/configs/stm32mp1.h 添加如下宏定义：</p>
+<div class="highlight"><pre><span class="cp">#define CONFIG_CMD_BOOTD </span><span class="cm">/* 使能 boot 和 bootd 命令 */</span><span class="cp"></span>
+</pre></div>
+
+<h2 id="bootcmd">bootcmd 和<a class="headerlink" href="#bootcmd" title="Permanent link"></a></h2>
+<h3 id="bootcmd-uboot">bootcmd 保存着 uboot 默认命令<a class="headerlink" href="#bootcmd-uboot" title="Permanent link"></a></h3>
+<p>uboot 倒计时结束以后就会执行 bootcmd 中的命令。这些命令一般都是用来启动 Linux 内核的，比如读取 EMMC 或者 NAND Flash 中的 Linux 内核镜像文件和设备树文件到 DRAM 中，然后启动 Linux 内核。可以在 uboot 启动以后进入命令行设置 bootcmd 环境变量的值。</p>
+<p>如果 EMMC 或者 NAND 中没有保存 bootcmd 的值，那么 uboot 就会使用默认的值，板子第一次运行 uboot 的时候都会使用默认值来设置 bootcmd 环境变量，文件 include/env_default.h有显示，可在stm32mp1.h 文件中通过设置宏
+CONFIG_BOOTCOMMAND 来设置 bootcmd 的默认值。</p>
+<h3 id="bootargs-uboot-linux">bootargs 保存着 uboot 传递给 Linux 内核的参数<a class="headerlink" href="#bootargs-uboot-linux" title="Permanent link"></a></h3>
+<p>比如指定 Linux 内核所使用的 console、指定根文件系统所在的分区等，如下面 bootargs 环境变量值：</p>
+<pre><code>console=ttySTM0,115200 root=/dev/mmcblk2p3 rootwait rw
+</code></pre>
+<ol>
+<li>console</li>
+</ol>
+<p>console 用来设置 linux 终端(或者叫控制台)，也就是通过什么设备来和 Linux 进行交互，是串口还是 LCD 屏幕</p>
+<p>如果是串口的话应该是串口几等等。一般设置串口作为 Linux 终端，这样就可以在电脑上通过 MobaXterm 来和 linux 交互了。这里设置 console 为 ttySTM0，因为 linux 启动以后 STM32MP1 的串口 4 在 linux 下的设备文件就是/dev/ttySTM0，在 Linux 下，一切皆文件。</p>
+<p>ttySTM0 后面有个“,115200”，这是设置串口的波特率， console=ttySTM0,115200 </p>
+<p>综合起来就是设置 ttySTM0（也就是串口 4）作为 Linux 的终端，并且串口波特率设置为 115200。</p>
+<ol start="2">
+<li>root</li>
+</ol>
+<p>root 用来设置根文件系统的位置， root=/dev/mmcblk2p3 用于指明根文件系统存放在mmcblk2 设备的分区 3 中。其中 /dev/mmcblkx(x=0~n) 表 示 mmc 设 备 ， 而 /dev/mmcblkxpy(x=0~n,y=1~n) 表示 mmc 设备 x 的分区 y。在 STM32MP1 开发板中/dev/mmcblk2 表示 EMMC，而/dev/mmcblk2p3 表示 EMMC 的分区 3。</p>
+<p>rootwait 表示等待 mmc 设备初始化完成以后再挂载，否则的话 mmc 设备还没初始化完成就挂载根文件系统会出错的。 </p>
+<p>rw 表示根文件系统是可以读写的</p>
+<ol start="3">
+<li>rootfstype</li>
+</ol>
+<p>此选项一般配合 root 一起使用， rootfstype 用于指定根文件系统类型，如果根文件系统为 ext 格式的话此选项无所谓。如果根文件系统是 yaffs、 jffs 或 ubifs 的话就需要设置此选项，指
+定根文件系统的类型。</p>
+<p>bootargs 常设置的选项就这三个</p>
+<h2 id="_10">图形配置<a class="headerlink" href="#_10" title="Permanent link"></a></h2>
+<p>需要安装 ncurses 库：</p>
+<pre><code>sudo apt-get install build-essential libncurses5-dev
+</code></pre>
+<p>执行</p>
+<div class="highlight"><pre>make stm32mp15_atk_trusted_defconfig
+make menuconfig
+</pre></div>
+
+<h2 id="_11">测试<a class="headerlink" href="#_11" title="Permanent link"></a></h2>
+<div class="highlight"><pre><span class="c1"># u-boot 中的网络配置</span>
+setenv ipaddr 192.168.1.250     //开发板 IP 地址
+setenv ethaddr 00:04:9f:04:d2:35 //开发板网卡 MAC 地址
+setenv gatewayip 192.168.1.1    //开发板默认网关
+setenv netmask 255.255.255.0    //开发板子网掩码
+setenv serverip 192.168.1.249   //服务器地址，也就是 Ubuntu 地址
+saveenv
+</pre></div>
+
+<p>然后 ping ubuntu虚拟机 测试</p>
+<p>最后使用 nfs 和 tftp 下载 ubuntu虚拟机文件：</p>
+<p>nfs C2000000 192.168.1.249:/home/zuozhongkai/linux/nfs/uImage</p>
+<p>tftp C2000000 uImage</p>
+<p>测试 USB OTG 功能，运行 <code>ums 0 mmc 1</code> 将 EMMC 模拟成 U 盘</p>
+<h1 id="linux_1">Linux内核<a class="headerlink" href="#linux_1" title="Permanent link"></a></h1>
+<h2 id="_12">移植<a class="headerlink" href="#_12" title="Permanent link"></a></h2>
+<p>安装 <code>sudo apt install lzop libssl-dev u-boot-tools</code></p>
+<p>解压,进到源码目录</p>
+<div class="highlight"><pre><span class="c1"># 打补丁</span>
+<span class="k">for</span> p in <span class="sb">`</span>ls -1 ../*.patch<span class="sb">`</span><span class="p">;</span> <span class="k">do</span> patch -p1 &lt; <span class="nv">$p</span><span class="p">;</span> <span class="k">done</span>
+
+<span class="c1"># 生成默认配置文件 生成 .config 配置文件</span>
+make <span class="nv">ARCH</span><span class="o">=</span>arm multi_v7_defconfig <span class="s2">&quot;fragment*.config&quot;</span>
+
+<span class="c1"># 再用两条命令打补丁</span>
+<span class="k">for</span> f in <span class="sb">`</span>ls -1 ../fragment*.config<span class="sb">`</span><span class="p">;</span> <span class="k">do</span> scripts/kconfig/merge_config.sh -m -r .config <span class="nv">$f</span><span class="p">;</span> <span class="k">done</span>
+yes <span class="s1">&#39;&#39;</span> <span class="p">|</span> make <span class="nv">ARCH</span><span class="o">=</span>arm oldconfig
+
+<span class="c1"># 要复制一份 .config 作为默认配置文件</span>
+cp .config ./arch/arm/configs/stm32mp1_atk_defconfig
+</pre></div>
+
+<p>打完补丁的 linux 源码 linux-5.4.31 拷贝到“my_linux”目录下</p>
+<p>Linux 内核源码目录下的主 Makefile 添加 ARCH 和 CROSS_COMPILE 这两个变量的值</p>
+<div class="highlight"><pre><span class="nv">ARCH</span>    <span class="o">?=</span> <span class="k">$(</span>SUBARCH<span class="k">)</span>
+<span class="c"># 再上面这句话的下面添加，下面两行</span>
+
+<span class="nv">ARCH</span> <span class="o">=</span> arm
+<span class="nv">CROSS_COMPILE</span> <span class="o">=</span> arm-none-linux-gnueabihf-
+</pre></div>
+
+<h3 id="_13">网络驱动修改<a class="headerlink" href="#_13" title="Permanent link"></a></h3>
+<p>需要支持正点原子 V1.3 之后的板子的 YT8511 芯片</p>
+<p>在 1、程序源码→8、模块驱动源码→1、 YT8511 驱动源码→linux 内核下修改方法→linux 
+将 motorcomm.c 和 motorcomm_phy.h 分别拷贝到 Linux 源码下的 <em>drivers/net/phy</em> 和 <em>include/linux</em> 目录下</p>
+<p>拷贝完成以后修改 <em>drivers/net/phy/Makefile</em> 文件最后，加上下面这句 <code>obj-$(CONFIG_MOTORCOMM_PHY) += motorcomm.o</code></p>
+<p>修改 <em>drivers/net/phy/Kconfig</em> 文件最后 加入：</p>
+<div class="highlight"><pre>config MOTORCOMM_PHY
+    tristate &quot;Motorcomm PHYs&quot;
+    ---help---
+        Supports the YT8010, YT8510, YT8511, YT8512 PHYs.
+
+在下面这句话的上面加入
+endif # PHYLIB
+</pre></div>
+
+<h2 id="_14">编译<a class="headerlink" href="#_14" title="Permanent link"></a></h2>
+<p>创建一个名为 <em>stm32mp157d_atk.sh</em> 的编译脚本</p>
+<div class="highlight"><pre><span class="ch">#!/bin/sh</span>
+
+make distclean
+make stm32mp1_atk_defconfig
+make menuconfig
+make uImage dtbs <span class="nv">LOADADDR</span><span class="o">=</span>0XC2000040 -j16
+</pre></div>
+
+<div class="highlight"><pre><span class="c1"># 给予可执行权限，仅第一次</span>
+chmod <span class="m">777</span> stm32mp157d_atk.sh
+<span class="c1"># 运行编译脚本</span>
+./stm32mp157d_atk.sh
+</pre></div>
+
+<p>如果提示：<code>"mkimage" command not found - U-Boot images will not be built</code> 就把 u-boot 源码目录下的 “tools/mkimage” 拿来用</p>
+<p>Linux 源码下的 <em>arch/arm/boot/dts/stm32mp157d-ed1.dtb</em> 设备树 和 <em>arch/arm/boot/uImage</em> 镜像文件拷贝到 tftp 的文件夹</p>
+<p>setenv bootcmd &lsquo;tftp c2000000 uImage;tftp c4000000 stm32mp157d-atk.dtb;bootm c2000000 - c4000000&rsquo;</p>
+<p>输入 make menuconfig 选上加入的驱动</p>
+<div class="highlight"><pre>-&gt; Device Drivers
+    -&gt; Network device support (NETDEVICES [=y])
+        -&gt; PHY Device support and infrastructure (PHYLIB [=y])
+            -&gt; &lt;*&gt; Motorcomm PHYs //将 YT8511 驱动编译进内核
+</pre></div>
+
+<h2 id="linux_2">在Linux中添加自己的开发板<a class="headerlink" href="#linux_2" title="Permanent link"></a></h2>
+<h3 id="_15">添加开发板对应的设备树<a class="headerlink" href="#_15" title="Permanent link"></a></h3>
+<p>在 arch/arm/boot/dts/目录下执行：</p>
+<div class="highlight"><pre>cp stm32mp15xx-edx.dtsi stm32mp157d-atk.dtsi
+cp stm32mp157d-ed1.dts stm32mp157d-atk.dts
+</pre></div>
+
+<p>将 stm32mp157d-atk.dts 中的 stm32mp15xx-edx.dtsi 头文件改为 <code>stm32mp15datk.dtsi</code></p>
+<h4 id="stm32mp157d-atkdtsi">修改 stm32mp157d-atk.dtsi 文件<a class="headerlink" href="#stm32mp157d-atkdtsi" title="Permanent link"></a></h4>
+<p>将根节点最后的三个节点（led、sd_switch、vin）替换成下面的：
+<div class="highlight"><pre><span class="nf">vddcore</span><span class="o">:</span> <span class="n">buck</span>1 {
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;vddcore&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;1200000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;1350000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="err">};</span>
+
+<span class="nf">v3v3</span><span class="o">:</span> <span class="n">regulator</span>-3<span class="n">p</span>3<span class="n">v</span> {
+    <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;regulator-fixed&quot;</span><span class="p">;</span>
+    regulator-name <span class="o">=</span> <span class="s2">&quot;v3v3&quot;</span><span class="p">;</span>
+    regulator-min-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-max-microvolt <span class="o">=</span> &lt;3300000&gt;<span class="p">;</span>
+    regulator-always-on<span class="p">;</span>
+    regulator-boot-on<span class="p">;</span>
+<span class="err">};</span>
+</pre></div></p>
+<p>删除以下节点
+adc dac i2c4 m4_rpoc pwr_regulators timers6 usbotg_hs usbphyc_port0 usbphyc_port1</p>
+<p>修改一下节点</p>
+<div class="highlight"><pre><span class="err">&amp;sdmmc1</span> <span class="err">{</span>
+    <span class="nv">pinctrl-names</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;opendrain&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_od_pins_a&gt;<span class="p">;</span>
+    pinctrl-2 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc1_b4_sleep_pins_a&gt;<span class="p">;</span>
+    broken-cd<span class="p">;</span>
+    st,neg-edge<span class="p">;</span>
+    bus-width <span class="o">=</span> &lt;4&gt;<span class="p">;</span>
+    vmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="err">};</span>
+
+<span class="err">&amp;sdmmc2</span> <span class="err">{</span>
+    <span class="nv">pinctrl-names</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;opendrain&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_od_pins_a&gt;<span class="p">;</span>
+    pinctrl-2 <span class="o">=</span> &lt;<span class="p">&amp;</span>sdmmc2_b4_sleep_pins_a&gt;<span class="p">;</span>
+    non-removable<span class="p">;</span>
+    st,neg-edge<span class="p">;</span>
+    bus-width <span class="o">=</span> &lt;8&gt;<span class="p">;</span>
+    vmmc-supply <span class="o">=</span> &lt;<span class="p">&amp;</span>v3v3&gt;<span class="p">;</span>
+    keep-power-in-suspend<span class="p">;</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+<span class="err">};</span>
+</pre></div>
+
+<p>在 dts 节点下面添加：</p>
+<div class="highlight"><pre><span class="err">&amp;ethernet0</span> <span class="err">{</span>
+    <span class="nv">status</span> <span class="o">=</span> <span class="s2">&quot;okay&quot;</span><span class="p">;</span>
+    pinctrl-0 <span class="o">=</span> &lt;<span class="p">&amp;</span>ethernet0_rgmii_pins_a&gt;<span class="p">;</span>
+    pinctrl-1 <span class="o">=</span> &lt;<span class="p">&amp;</span>ethernet0_rgmii_pins_sleep_a&gt;<span class="p">;</span>
+    pinctrl-names <span class="o">=</span> <span class="s2">&quot;default&quot;</span>, <span class="s2">&quot;sleep&quot;</span><span class="p">;</span>
+    phy-mode <span class="o">=</span> <span class="s2">&quot;rgmii-id&quot;</span><span class="p">;</span>
+    max-speed <span class="o">=</span> &lt;1000&gt;<span class="p">;</span>
+    phy-handle <span class="o">=</span> &lt;<span class="p">&amp;</span>phy0&gt;<span class="p">;</span>
+
+    mdio0 <span class="o">{</span>
+<span class="c">        #address-cells = &lt;1&gt;;</span>
+<span class="c">        #size-cells = &lt;0&gt;;</span>
+        <span class="nv">compatible</span> <span class="o">=</span> <span class="s2">&quot;snps,dwmac-mdio&quot;</span><span class="p">;</span>
+        phy0: ethernet-phy@0 <span class="o">{</span>
+            <span class="nv">reg</span> <span class="o">=</span> &lt;0&gt;<span class="p">;</span>
+        <span class="o">}</span><span class="p">;</span>
+    <span class="o">}</span><span class="p">;</span>
+<span class="err">};</span>
+</pre></div>
+
+<ul>
+<li>编译 stm32mp157d-atk.dts 设备树</li>
+</ul>
+<p>打开 arch/arm/boot/dts/Makefile，到 <code>dtb-$(CONFIG_ARCH_STM32)</code> 配置项，在此配置项中加入:</p>
+<pre><code>`stm32mp157d-atk.dtb`
+</code></pre>
+<h3 id="_16">关闭内核模块验证<a class="headerlink" href="#_16" title="Permanent link"></a></h3>
+<p>编译驱动模块，然后在系统里面加载，加载的时候系统会验证模块，有时候会验证出错。比如<em>板子运行的系统</em>和<em>编译驱动模块所用的系统</em>不一致的时候，这样为我们的学习带来了很大的不便，为了方便开发，我们可以关闭内核模块验证</p>
+<blockquote>
+<p>make menuconfig</p>
+</blockquote>
+<div class="highlight"><pre># 路径
+-&gt; Enable loadable module support (MODULES [=y])
+    -&gt;Module signature verification
+</pre></div>
+
+<ul>
+<li>取消对“Module signature verification”选项的选中</li>
+<li>最后将配置项保存到 stm32mp1_atk_defconfig 里面 (<em>./arch/arm/config/stm32mp1_atk_defconfig</em>)</li>
+</ul>
+<h3 id="log">关闭内核 log 信息时间戳<a class="headerlink" href="#log" title="Permanent link"></a></h3>
+<div class="highlight"><pre>-&gt; Kernel hacking
+    -&gt; printk and dmesg options
+        -&gt;Show timing information on printks //取消选中
+</pre></div>
+
+<h2 id="emmc">烧写系统镜像到 EMMC 里面<a class="headerlink" href="#emmc" title="Permanent link"></a></h2>
+<blockquote>
+<p>打包程在 Ubuntu 下完成</p>
+</blockquote>
+<p>进入tftp文件夹里面有要打包的镜像</p>
+<ol>
+<li>新建 ext4 格式磁盘</li>
+</ol>
+<div class="highlight"><pre>dd <span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>bootfs.ext4 <span class="nv">bs</span><span class="o">=</span>1M <span class="nv">count</span><span class="o">=</span>10
+mkfs.ext4 -L bootfs bootfs.ext4
+</pre></div>
+
+<blockquote>
+<p>dd 命令创建一个名为 bootfs.ext4 的磁盘， 
+of 指定磁盘名字为“bootfs.ext4”；
+bs 指定磁盘输入/输出块大小为 1MB； 
+count 指定磁盘的块数量为 10 个。
+因此 bootfs.ext4 只能存放不超过 10MB 的文件，如果要存放的文件总大小超过 10MB，那么就要适当调整 count 参数的大小</p>
+</blockquote>
+<ul>
+<li>使用 mkfs.ext4 将 bootfs.ext4 磁盘格式化为 ext4 格式</li>
+</ul>
+<ol start="2">
+<li>将系统镜像拷贝到 ext4 磁盘中</li>
+</ol>
+<div class="highlight"><pre><span class="c1"># 创建目录/mnt/bootfs</span>
+sudo mkdir /mnt/bootfs
+<span class="c1"># 用 mount 命令将 bootfs.ext4 挂载到/mnt/bootfs 目录下</span>
+sudo mount bootfs.ext4 /mnt/bootfs/
+sudo cp uImage stm32mp157d-atk.dtb /mnt/bootfs/
+<span class="c1"># 拷贝完卸载</span>
+sudo umount /mnt/bootfs
+</pre></div>
+
+<h3 id="emmc_1">烧写到 EMMC<a class="headerlink" href="#emmc_1" title="Permanent link"></a></h3></article></body></html>

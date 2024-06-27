@@ -371,3 +371,6 @@ tftp c2000000 stm32mp157d-atk.dtb >> tftp c4000000 stm32mp157d-atk.dtb
 
 295页第3行：
 mii info 0x4 >> mii info 0x0
+
+586页第2行：
+因为我们及时修改正常了 >> 因为我们即使修改正常了
